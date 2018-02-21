@@ -1,0 +1,70 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Insogram
+    link(rel='stylesheet', href='app.css')
+
+    link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+
+  body
+    section#main-container
+      .container
+        .row
+          .col.s10.push-s1
+            .row
+              .col.m5.hide-on-small-only
+                img.iphone(src='./public/iphone.png', alt='iphone')
+              .col.s12.m7
+                .row
+                  .signup-box
+                    h1.title Insogram
+                    form.signup-form
+                      h2 Regístrate para ver fotos de tus amigos
+                      .section
+                        a.btn.btn-fb.hide-on-small-only(href='#') Iniciar Sesión con Facebook
+                        a.btn.btn-fb.hide-on-med-and-up(href='#') Iniciar Sesión
+                      .divider
+                      .section
+                        input#email(type='email', name='email', placeholder='Correo Electrónico')
+                        input#name(type='text', name='name', placeholder='Nombre Completo')
+                        input#username(type='text', name='username', placeholder='Nombre de Usuario')
+                        input#password(type='password', name='password', placeholder='Contraseña')
+                        button.btn.waves-effect.waves-light.btn-signup(type='submit') Regístrate
+                .row
+                  .login-box
+                    | ¿Tienes una cuenta? 
+                    a(href='/signin') Entrar
+    footer.site-footer
+      .container
+        .row
+          .col.s12.l3.center-align
+            a.dropdown-button.btn.btn-flat(href='#', data-activates='dropdown1') Idioma
+            ul#dropdown1.dropdown-content
+              li
+                a(href='#!') Español
+              li
+                a(href='#!') Inglés
+          .col.s12.l3.push-l6.center-align
+            | © 2018 Insogram
+    script(src='http://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+    script(src="bundle.js")
