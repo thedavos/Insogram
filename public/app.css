@@ -6917,8 +6917,9 @@ body {
   color: #125688;
   font-family: 'Montserrat', 'sans-serif'; }
 
-#main-container {
-  margin: 30px auto; }
+.landing {
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
 .iphone {
   max-width: 100%; }
@@ -6936,7 +6937,9 @@ body {
   text-align: center; }
 
 .title {
-  font-family: 'Oleo Script'; }
+  font-family: 'Oleo Script';
+  font-size: 42px;
+  color: #125688 !important; }
 
 .signup-form {
   width: 65%;
@@ -6954,10 +6957,23 @@ body {
   background-color: #2d6599; }
 
 .btn-signup {
-  background-color: #125688; }
+  background-color: #125688;
+  font-weight: 500; }
 
 .btn-signup:hover {
   background-color: #4090db; }
 
 .btn.btn-flat, .btn-flat.btn-large {
   color: #125688; }
+
+.btn.btn-fb.hide-on-med-and-up svg, .btn-fb.hide-on-med-and-up.btn-large svg {
+  width: 20px;
+  height: 14px; }
+
+.header {
+  background-color: white;
+  box-shadow: none;
+  border-bottom: 1px solid #edeeee; }
+
+.timeline {
+  padding: 30px 0; }

@@ -6,7 +6,13 @@ inso.set('view engine', 'pug')
 
 inso.use(express.static(__dirname + '/public'))
 
-inso.get('/', function( req, res) {
+inso.get('/', function(req, res) {
+    res.render('index')
+})
+inso.get('/signup', function(req, res) {
+    res.render('index')
+})
+inso.get('/signin', function(req, res) {
     res.render('index')
 })
 

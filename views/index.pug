@@ -4,7 +4,7 @@ html(lang='es')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title Insogram
+    title=title
     link(rel='stylesheet', href='app.css')
 
     link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
@@ -32,7 +32,7 @@ html(lang='es')
           .col.s10.push-s1
             .row
               .col.m5.hide-on-small-only
-                img.iphone(src='./public/iphone.png', alt='iphone')
+                img.iphone(src='iphone.png', alt='iphone')
               .col.s12.m7
                 .row
                   .signup-box
@@ -65,6 +65,8 @@ html(lang='es')
                 a(href='#!') Inglés
           .col.s12.l3.push-l6.center-align
             | © 2018 Insogram
+    
+    script(defer='', src='https://use.fontawesome.com/releases/v5.0.6/js/all.js')  
     script(src='http://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
     script(src="bundle.js")
