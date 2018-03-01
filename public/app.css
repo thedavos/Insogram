@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Oleo+Script");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Oleo+Script");
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -6938,7 +6938,7 @@ body {
 
 .title {
   font-family: 'Oleo Script';
-  font-size: 42px;
+  font-size: 42px !important;
   color: #125688 !important; }
 
 .signup-form {
@@ -6977,3 +6977,32 @@ body {
 
 .timeline {
   padding: 30px 0; }
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 12px; }
+
+.card small.time {
+  line-height: 48px;
+  color: #125688; }
+
+.card p {
+  padding: 20px 0; }
+
+.card .likes {
+  line-height: 30px;
+  margin-left: 12px;
+  color: #125688;
+  font-size: 20px; }
+
+.card .fa-heart {
+  font-size: 30px;
+  color: #125688; }
+
+.card .username {
+  color: #125688;
+  line-height: 48px;
+  font-weight: 600; }

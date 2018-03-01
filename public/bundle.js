@@ -2744,13 +2744,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     $('title').html('Insogram');
 
     var main = document.getElementById('main-container');
-    (0, _emptyElement2.default)(main).appendChild(_template2.default);
+
+    var pictures = [{
+        user: {
+            username: 'vados',
+            avatar: 'https://scontent.flim5-2.fna.fbcdn.net/v/t1.0-9/10632679_1080491731972501_6601894749010616168_n.jpg?_nc_eui2=v1%3AAeFyiNFniXY4_aQPrsgrKtkrURh279cKhYXRDLJLvg2LoXWiV7YCwPIv88nNFgZoZMdxFonV2hZvPeCrj2xRkoxUWvR5KXOpEg5R1btJEmYnmQ&oh=a6f246a86117c61fd98137fe94140e64&oe=5B08E6CB'
+        },
+        url: 'office.jpg',
+        likes: 10,
+        liked: true
+    }, {
+        user: {
+            username: 'domi',
+            avatar: 'https://scontent.flim5-2.fna.fbcdn.net/v/t1.0-9/10632679_1080491731972501_6601894749010616168_n.jpg?_nc_eui2=v1%3AAeFyiNFniXY4_aQPrsgrKtkrURh279cKhYXRDLJLvg2LoXWiV7YCwPIv88nNFgZoZMdxFonV2hZvPeCrj2xRkoxUWvR5KXOpEg5R1btJEmYnmQ&oh=a6f246a86117c61fd98137fe94140e64&oe=5B08E6CB'
+        },
+        url: 'office.jpg',
+        likes: 32,
+        liked: true
+    }];
+
+    (0, _emptyElement2.default)(main).appendChild((0, _template2.default)(pictures));
 });
 
 },{"./template":18,"empty-element":3,"page":12}],18:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="container timeline">\n  <div class="row">\n    <div class="col s12 m10 offset-m1 l6 offset-l3">\n      content\n    </div>\n  </div>\n</div>'], ['<div class="container timeline">\n  <div class="row">\n    <div class="col s12 m10 offset-m1 l6 offset-l3">\n      content\n    </div>\n  </div>\n</div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="container timeline">\n    <div class="row">\n      <div class="col s12 m10 offset-m1 l6 offset-l3">\n        ', '\n      </div>\n    </div>\n  </div>'], ['<div class="container timeline">\n    <div class="row">\n      <div class="col s12 m10 offset-m1 l6 offset-l3">\n        ', '\n      </div>\n    </div>\n  </div>']);
 
 var _yoYo = require('yo-yo');
 
@@ -2760,15 +2779,23 @@ var _layout = require('../layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 
+var _pictureCard = require('../picture-card');
+
+var _pictureCard2 = _interopRequireDefault(_pictureCard);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var template = (0, _yoYo2.default)(_templateObject);
+module.exports = function (pictures) {
+  var el = (0, _yoYo2.default)(_templateObject, pictures.map(function (pic) {
+    return (0, _pictureCard2.default)(pic);
+  }));
 
-module.exports = (0, _layout2.default)(template);
+  return (0, _layout2.default)(el);
+};
 
-},{"../layout":21,"yo-yo":15}],19:[function(require,module,exports){
+},{"../layout":21,"../picture-card":22,"yo-yo":15}],19:[function(require,module,exports){
 "use strict";
 
 var _page = require("page");
@@ -2785,7 +2812,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _page2.default)();
 
-},{"./homepage":17,"./signin":22,"./signup":24,"page":12}],20:[function(require,module,exports){
+},{"./homepage":17,"./signin":23,"./signup":25,"page":12}],20:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container landing">\n                <div class="row">\n                    <div class="col s10 push-s1">\n                        <div class="row">\n                            <div class="col m5 hide-on-small-only">\n                                <img src="iphone.png" alt="iphone" class="iphone">\n                            </div>\n                            ', '\n                        </div>\n                    </div>\n                </div>\n            </div>'], ['<div class="container landing">\n                <div class="row">\n                    <div class="col s10 push-s1">\n                        <div class="row">\n                            <div class="col m5 hide-on-small-only">\n                                <img src="iphone.png" alt="iphone" class="iphone">\n                            </div>\n                            ', '\n                        </div>\n                    </div>\n                </div>\n            </div>']);
@@ -2816,6 +2843,23 @@ module.exports = function layout(content) {
 };
 
 },{"yo-yo":15}],22:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<div class="card">\n        <div class="card-image waves-effect waves-block waves-light">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/user/', '" class="card-title">\n                <img src="', '" class="avatar">\n                <span class="username"> ', '</span>\n                <small class="right time">Hace 1 d\xEDa</small>\n                <p>\n                    <a class="left" href="#"><i class="far fa-heart"></i></a>\n                    <span class="left likes">', ' me gusta</span>    \n                </p>\n            </a>\n        </div>\n    </div>'], ['<div class="card">\n        <div class="card-image waves-effect waves-block waves-light">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/user/', '" class="card-title">\n                <img src="', '" class="avatar">\n                <span class="username"> ', '</span>\n                <small class="right time">Hace 1 d\xEDa</small>\n                <p>\n                    <a class="left" href="#"><i class="far fa-heart"></i></a>\n                    <span class="left likes">', ' me gusta</span>    \n                </p>\n            </a>\n        </div>\n    </div>']);
+
+var _yoYo = require('yo-yo');
+
+var _yoYo2 = _interopRequireDefault(_yoYo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+module.exports = function (pic) {
+    return (0, _yoYo2.default)(_templateObject, pic.url, pic.user.username, pic.user.avatar, pic.user.username, pic.likes);
+};
+
+},{"yo-yo":15}],23:[function(require,module,exports){
 "use strict";
 
 var _page = require("page");
@@ -2839,7 +2883,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _emptyElement2.default)(main).appendChild(_template2.default);
 });
 
-},{"./template":23,"empty-element":3,"page":12}],23:[function(require,module,exports){
+},{"./template":24,"empty-element":3,"page":12}],24:[function(require,module,exports){
 "use strict";
 
 var _templateObject = _taggedTemplateLiteral(["<div class=\"col s12 m7\">\n                            <div class=\"row\">\n                                <div class=\"signup-box\">\n                                    <h1 class=\"title\">Insogram</h1>\n                                    <form class=\"signup-form\">\n                                        <h2>Reg\xEDstrate para ver fotos de tus amigos</h2>\n                                        <div class=\"section\">\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-small-only\">Iniciar Sesi\xF3n con Facebook</a>\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-med-and-up\"><i class=\"fab fa-facebook-square\"></i>Iniciar Sesi\xF3n</a>\n                                        </div>\n                                        <div class=\"divider\"></div>\n                                        <div class=\"section\">\n                                            <input type=\"text\" name=\"username\" placeholder=\"Nombre de Usuario\" id=\"username\">\n                                            <input type=\"password\" name=\"password\"  placeholder=\"Contrase\xF1a\" id=\"password\">\n                                            <button class=\"btn waves-effect waves-light btn-signup\" type=\"submit\">Inicia Sesi\xF3n</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"login-box\">\n                                    \xBFNo Tienes una cuenta? <a href=\"/signup\">Reg\xEDstrate</a>\n                                </div>\n                            </div>\n                        </div>"], ["<div class=\"col s12 m7\">\n                            <div class=\"row\">\n                                <div class=\"signup-box\">\n                                    <h1 class=\"title\">Insogram</h1>\n                                    <form class=\"signup-form\">\n                                        <h2>Reg\xEDstrate para ver fotos de tus amigos</h2>\n                                        <div class=\"section\">\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-small-only\">Iniciar Sesi\xF3n con Facebook</a>\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-med-and-up\"><i class=\"fab fa-facebook-square\"></i>Iniciar Sesi\xF3n</a>\n                                        </div>\n                                        <div class=\"divider\"></div>\n                                        <div class=\"section\">\n                                            <input type=\"text\" name=\"username\" placeholder=\"Nombre de Usuario\" id=\"username\">\n                                            <input type=\"password\" name=\"password\"  placeholder=\"Contrase\xF1a\" id=\"password\">\n                                            <button class=\"btn waves-effect waves-light btn-signup\" type=\"submit\">Inicia Sesi\xF3n</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"login-box\">\n                                    \xBFNo Tienes una cuenta? <a href=\"/signup\">Reg\xEDstrate</a>\n                                </div>\n                            </div>\n                        </div>"]);
@@ -2860,7 +2904,7 @@ var signInForm = (0, _yoYo2.default)(_templateObject);
 
 module.exports = (0, _landing2.default)(signInForm);
 
-},{"../landing":20,"yo-yo":15}],24:[function(require,module,exports){
+},{"../landing":20,"yo-yo":15}],25:[function(require,module,exports){
 "use strict";
 
 var _page = require("page");
@@ -2884,7 +2928,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _emptyElement2.default)(main).appendChild(_template2.default);
 });
 
-},{"./template":25,"empty-element":3,"page":12}],25:[function(require,module,exports){
+},{"./template":26,"empty-element":3,"page":12}],26:[function(require,module,exports){
 "use strict";
 
 var _templateObject = _taggedTemplateLiteral(["<div class=\"col s12 m7\">\n                            <div class=\"row\">\n                                <div class=\"signup-box\">\n                                    <h1 class=\"title\">Insogram</h1>\n                                    <form class=\"signup-form\">\n                                        <h2>Reg\xEDstrate para ver fotos de tus amigos</h2>\n                                        <div class=\"section\">\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-small-only\">Iniciar Sesi\xF3n con Facebook</a>\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-med-and-up\"><i class=\"fab fa-facebook-square\" aria-hidden=\"true\"></i>Iniciar Sesi\xF3n</a>\n                                        </div>\n                                        <div class=\"divider\"></div>\n                                        <div class=\"section\">\n                                            <input type=\"email\" name=\"email\" placeholder=\"Correo Electr\xF3nico\" id=\"email\">\n                                            <input type=\"text\" name=\"name\" placeholder=\"Nombre Completo\" id=\"name\">\n                                            <input type=\"text\" name=\"username\" placeholder=\"Nombre de Usuario\" id=\"username\">\n                                            <input type=\"password\" name=\"password\"  placeholder=\"Contrase\xF1a\" id=\"password\">\n                                            <button class=\"btn waves-effect waves-light btn-signup\" type=\"submit\">Reg\xEDstrate</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"login-box\">\n                                    \xBFTienes una cuenta? <a href=\"/signin\">Entrar</a>\n                                </div>\n                            </div>\n                        </div>"], ["<div class=\"col s12 m7\">\n                            <div class=\"row\">\n                                <div class=\"signup-box\">\n                                    <h1 class=\"title\">Insogram</h1>\n                                    <form class=\"signup-form\">\n                                        <h2>Reg\xEDstrate para ver fotos de tus amigos</h2>\n                                        <div class=\"section\">\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-small-only\">Iniciar Sesi\xF3n con Facebook</a>\n                                            <a href=\"#\" class=\"btn btn-fb hide-on-med-and-up\"><i class=\"fab fa-facebook-square\" aria-hidden=\"true\"></i>Iniciar Sesi\xF3n</a>\n                                        </div>\n                                        <div class=\"divider\"></div>\n                                        <div class=\"section\">\n                                            <input type=\"email\" name=\"email\" placeholder=\"Correo Electr\xF3nico\" id=\"email\">\n                                            <input type=\"text\" name=\"name\" placeholder=\"Nombre Completo\" id=\"name\">\n                                            <input type=\"text\" name=\"username\" placeholder=\"Nombre de Usuario\" id=\"username\">\n                                            <input type=\"password\" name=\"password\"  placeholder=\"Contrase\xF1a\" id=\"password\">\n                                            <button class=\"btn waves-effect waves-light btn-signup\" type=\"submit\">Reg\xEDstrate</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"login-box\">\n                                    \xBFTienes una cuenta? <a href=\"/signin\">Entrar</a>\n                                </div>\n                            </div>\n                        </div>"]);
