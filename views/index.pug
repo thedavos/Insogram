@@ -26,46 +26,8 @@ html(lang='es')
     meta(name='theme-color', content='#ffffff')
 
   body
+    section#header-container
     section#main-container
-      .container
-        .row
-          .col.s10.push-s1
-            .row
-              .col.m5.hide-on-small-only
-                img.iphone(src='iphone.png', alt='iphone')
-              .col.s12.m7
-                .row
-                  .signup-box
-                    h1.title Insogram
-                    form.signup-form
-                      h2 Regístrate para ver fotos de tus amigos
-                      .section
-                        a.btn.btn-fb.hide-on-small-only(href='#') Iniciar Sesión con Facebook
-                        a.btn.btn-fb.hide-on-med-and-up(href='#') Iniciar Sesión
-                      .divider
-                      .section
-                        input#email(type='email', name='email', placeholder='Correo Electrónico')
-                        input#name(type='text', name='name', placeholder='Nombre Completo')
-                        input#username(type='text', name='username', placeholder='Nombre de Usuario')
-                        input#password(type='password', name='password', placeholder='Contraseña')
-                        button.btn.waves-effect.waves-light.btn-signup(type='submit') Regístrate
-                .row
-                  .login-box
-                    | ¿Tienes una cuenta? 
-                    a(href='/signin') Entrar
-    footer.site-footer
-      .container
-        .row
-          .col.s12.l3.center-align
-            a.dropdown-button.btn.btn-flat(href='#', data-activates='dropdown1') Idioma
-            ul#dropdown1.dropdown-content
-              li
-                a(href='#!') Español
-              li
-                a(href='#!') Inglés
-          .col.s12.l3.push-l6.center-align
-            | © 2018 Insogram
-    
     script(defer='', src='https://use.fontawesome.com/releases/v5.0.6/js/all.js')  
     script(src='http://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')

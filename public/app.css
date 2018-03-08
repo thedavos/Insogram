@@ -6999,10 +6999,25 @@ body {
   font-size: 20px; }
 
 .card .fa-heart {
-  font-size: 30px;
+  font-size: 30px; }
+
+.card .void {
   color: #125688; }
+
+.card .full {
+  color: #f44336;
+  display: none; }
 
 .card .username {
   color: #125688;
   line-height: 48px;
   font-weight: 600; }
+
+.card .card-content .card-title {
+  display: inline-block; }
+
+.card.liked .void {
+  display: none; }
+
+.card.liked .full {
+  display: block; }
