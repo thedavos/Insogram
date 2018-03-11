@@ -5,7 +5,7 @@ import request from 'superagent'
 import header from '../header'
 import axios from 'axios'
 
-page('/', header, loadPicturesAxios, function (ctx, next) {
+page('/', header, loadPicturesAsync, function (ctx, next) {
     $('title').html('Insogram')
 
     const main = document.getElementById('main-container')
@@ -33,4 +33,27 @@ function loadPicturesAxios(ctx, next) {
         .catch(function (err) { 
             console.log(err)
          })
+}
+function loadPicturesFetch(ctx, next) {
+    fetch('/api/pictures')
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (pictures) { 
+            ctx.pictures = pictures
+            next()
+         })
+         .catch(function (err) { 
+             console.log(err)
+          })
+}
+
+async function loadPicturesAsync(ctx, next) {
+    try {
+        var pictures = await fetch('/api/pictures').then(res => res.json())
+        ctx.pictures = pictures
+        next()
+    } catch (e) {
+        return console.log(e)
+    }
 }
