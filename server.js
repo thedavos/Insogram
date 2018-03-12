@@ -52,10 +52,7 @@ inso.get('/api/pictures', function (req, res) {
             createdAt: new Date().setDate(new Date().getDate() - 10)
         }
     ]
-
-    setTimeout(function () {
-        res.send(pictures)
-    }, 2000) 
+    setTimeout(() => res.send(pictures), 2000)
 })
 
 inso.post('/api/pictures', function (req, res){
@@ -65,6 +62,35 @@ inso.post('/api/pictures', function (req, res){
         }
         res.send('File uploaded')
     })
+})
+
+inso.get('/:username', function(req, res) {
+    res.render('index')
+})
+
+inso.get('/api/user/:username', function (req, res) {
+    const user = {
+        username: 'vados',
+        avatar: 'https://pbs.twimg.com/profile_images/716293413759377408/2W8UoVU1_400x400.jpg',
+        pictures: [
+            {
+                id: 1,
+                src: 'https://instagram.flim5-2.fna.fbcdn.net/vp/3188a041474e959413d61ed13a135f1f/5B3F442D/t51.2885-15/s640x640/sh0.08/e35/27574887_184136375650928_7493125915992391680_n.jpg',
+                likes: 1
+            },
+            {
+                id: 2,
+                src: 'https://instagram.flim5-2.fna.fbcdn.net/vp/564aa91999efc977e4fc9223dcebb34a/5B27DB81/t51.2885-15/s640x640/sh0.08/e35/28156796_927363184097186_8767730196351549440_n.jpg',
+                likes: 3
+            },
+            {
+                id: 3,
+                src: 'https://instagram.flim5-2.fna.fbcdn.net/vp/b763138c8d13fbbe9973e4c5fd701e1d/5B2DCD59/t51.2885-15/e15/26066458_1989498067977000_1640645960537210880_n.jpg',
+                likes: 5
+            }
+        ]
+    }
+    res.send(user)
 })
 
 inso.listen(8000, function (err) {

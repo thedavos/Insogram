@@ -5,13 +5,20 @@ import request from 'superagent'
 import header from '../header'
 import axios from 'axios'
 
-page('/', header, loadPicturesAsync, function (ctx, next) {
+page('/', header, loading, loadPicturesAsync, function (ctx, next) {
     $('title').html('Insogram')
 
     const main = document.getElementById('main-container')
 
     empty(main).appendChild(template(ctx.pictures));
 })
+
+function loading(ctx, next) {
+    const el = document.createElement('div')
+    el.classList.add('loader')
+    document.getElementById('main-container').appendChild(el)    
+    next()
+}
 
 function loadPictures(ctx, next) {
     request
