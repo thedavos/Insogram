@@ -68,6 +68,10 @@ inso.get('/:username', function(req, res) {
     res.render('index')
 })
 
+inso.get('/:username/:id', function (req, res) {
+    res.render('index')
+})
+
 inso.get('/api/user/:username', function (req, res) {
     const user = {
         username: 'vados',
