@@ -30,7 +30,7 @@
     "file-extension": "^4.0.2",
     "intl": "^1.2.5",
     "intl-messageformat": "^2.2.0",
-    "intl-relativeformat": "^2.1.0",
+    "intl-relativeformat": "^6.4.3",
     "materialize-css": "^0.100.2",
     "multer": "^1.3.0",
     "page": "^1.8.3",
