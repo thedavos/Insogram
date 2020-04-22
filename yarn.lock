@@ -3630,9 +3630,9 @@ outpipe@^1.1.0:
   dependencies:
     shell-quote "^1.4.2"
 
-page@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/page/-/page-1.8.3.tgz#cc46fd6e614f5a60ebc68d0e0e3570301dae7c0e"
+page@^1.11.6:
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/page/-/page-1.11.6.tgz#5ef4efc7073749b8085ccdaa0dcd7c9e0de12fe3"
   dependencies:
     path-to-regexp "~1.2.1"
 
