@@ -8,6 +8,16 @@
   dependencies:
     acorn "^5.2.1"
 
+"@formatjs/intl-numberformat@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-4.2.0.tgz#6ce7b59b6baf218515f846f26b568a1c42a2cec5"
+  dependencies:
+    "@formatjs/intl-utils" "^3.1.0"
+
+"@formatjs/intl-utils@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-3.1.0.tgz#759012e2e444f7fbeb61f5148a8d95202713d82e"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.0.tgz#4beb190e239fe05bac5e57e8d8376cab4f20c65c"
@@ -2562,15 +2572,32 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
+intl-format-cache@^4.2.32:
+  version "4.2.32"
+  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.32.tgz#c971a58f7e6d85a7c1f7a24d512704912e8293e6"
+
 intl-messageformat-parser@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.4.0.tgz#b43d45a97468cadbe44331d74bb1e8dea44fc075"
 
-intl-messageformat@^2.0.0, intl-messageformat@^2.2.0:
+intl-messageformat-parser@^5.0.10:
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.0.10.tgz#fbf8c9b6200ed3c99c9173ad1067618a75d2336f"
+  dependencies:
+    "@formatjs/intl-numberformat" "^4.2.0"
+
+intl-messageformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-2.2.0.tgz#345bcd46de630b7683330c2e52177ff5eab484fc"
   dependencies:
     intl-messageformat-parser "1.4.0"
+
+intl-messageformat@^8.3.17:
+  version "8.3.17"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.3.17.tgz#b7750c74ae576dc0bb4353456fd04630b69c353f"
+  dependencies:
+    intl-format-cache "^4.2.32"
+    intl-messageformat-parser "^5.0.10"
 
 intl-relativeformat@^2.1.0:
   version "2.1.0"
