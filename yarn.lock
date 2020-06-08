@@ -8,6 +8,18 @@
   dependencies:
     acorn "^5.2.1"
 
+"@formatjs/intl-numberformat@^4.2.6":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-4.2.6.tgz#a1ae188919ce54fc2eda8ff3e2b83c1bbaa0704d"
+  dependencies:
+    "@formatjs/intl-utils" "^3.3.1"
+
+"@formatjs/intl-utils@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-3.3.1.tgz#7ceadbb7e251318729d9bf693731e1a5dcdfa15a"
+  dependencies:
+    emojis-list "^3.0.0"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.0.tgz#4beb190e239fe05bac5e57e8d8376cab4f20c65c"
@@ -1684,6 +1696,10 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emojis-list@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
+
 empty-element@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/empty-element/-/empty-element-1.0.0.tgz#f781eed171b91c208cb0044745920900f5529395"
@@ -2562,15 +2578,32 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
+intl-format-cache@^4.2.38:
+  version "4.2.38"
+  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.38.tgz#36de38f45d6881d6566e7a1c45f971ad39ab1c56"
+
 intl-messageformat-parser@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.4.0.tgz#b43d45a97468cadbe44331d74bb1e8dea44fc075"
 
-intl-messageformat@^2.0.0, intl-messageformat@^2.2.0:
+intl-messageformat-parser@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.1.3.tgz#bd57fffebdf832a425edd330107bbf832cdbbbb8"
+  dependencies:
+    "@formatjs/intl-numberformat" "^4.2.6"
+
+intl-messageformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-2.2.0.tgz#345bcd46de630b7683330c2e52177ff5eab484fc"
   dependencies:
     intl-messageformat-parser "1.4.0"
+
+intl-messageformat@^8.3.23:
+  version "8.3.23"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.3.23.tgz#139c79db5e58dd5bd28c963eae1d05ad23fe940b"
+  dependencies:
+    intl-format-cache "^4.2.38"
+    intl-messageformat-parser "^5.1.3"
 
 intl-relativeformat@^2.1.0:
   version "2.1.0"
