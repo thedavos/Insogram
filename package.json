@@ -29,7 +29,7 @@
     "express": "^4.16.2",
     "file-extension": "^4.0.2",
     "intl": "^1.2.5",
-    "intl-messageformat": "^2.2.0",
+    "intl-messageformat": "^9.7.1",
     "intl-relativeformat": "^2.1.0",
     "materialize-css": "^0.100.2",
     "multer": "^1.3.0",
